@@ -545,7 +545,7 @@ CREATE TABLE alert_record (
 
 -- 管理员用户（密码: admin123）
 INSERT INTO sys_user (username, password, real_name, status) VALUES
-('admin', '$2a$10$N.zmdr9k7uOCQb376NoUnuTJ8iAt6Z5EHsM8lE9lBOsl7iKTVKIUi', '系统管理员', 1);
+('admin', '$2a$10$a6vhfdtwP/TpbqCjEs/buOyTuhADik5iiZPpMNmG6UxDg17Io/eZa', '系统管理员', 1);
 
 -- 基础角色
 INSERT INTO sys_role (role_code, role_name, description) VALUES

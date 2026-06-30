@@ -247,7 +247,7 @@ const MainLayout: React.FC = () => {
           <Dropdown menu={{ items: userMenuItems }} placement="bottomRight">
             <div style={{ cursor: 'pointer', display: 'flex', alignItems: 'center', gap: 8 }}>
               <Avatar icon={<UserOutlined />} />
-              <Text>{user?.realName || user?.username || '用户'}</Text>
+              <Text>{user?.username || '用户'}</Text>
             </div>
           </Dropdown>
         </Header>
