@@ -88,6 +88,9 @@ export const createWarehouse = (data: Partial<Warehouse>) =>
 export const updateWarehouse = (id: number, data: Partial<Warehouse>) =>
   request.put<Result<Warehouse>>(`/inventory/warehouses/${id}`, data);
 
+export const deleteWarehouse = (id: number) =>
+  request.delete<Result<void>>(`/inventory/warehouses/${id}`);
+
 export const getStorageLocations = (warehouseId: number) =>
   request.get<Result<StorageLocation[]>>(`/inventory/warehouses/${warehouseId}/locations`);
 

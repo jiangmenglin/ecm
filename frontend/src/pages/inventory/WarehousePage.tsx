@@ -5,7 +5,7 @@ import {
 import {
   PlusOutlined, EditOutlined, DeleteOutlined, EnvironmentOutlined,
 } from '@ant-design/icons';
-import { getWarehouses, createWarehouse, updateWarehouse } from '../../api';
+import { getWarehouses, createWarehouse, updateWarehouse, deleteWarehouse } from '../../api';
 import type { Warehouse } from '../../types';
 
 const { Title, Text } = Typography;

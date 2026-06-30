@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import {
-  Form, Input, Select, InputNumber, Button, Card, Space, Switch, message, Typography,
+  Form, Input, Select, TreeSelect, InputNumber, Button, Card, Space, Switch, message, Typography,
   Row, Col, Divider,
 } from 'antd';
 import {
@@ -72,7 +72,7 @@ const ComponentFormPage: React.FC = () => {
     }
   };
 
-  const buildCategoryTreeData = (cats: Category[]): { title: string; value: number; key: number; children?: ReturnType<typeof buildCategoryTreeData> }[] =>
+  const buildCategoryTreeData = (cats: Category[]): any =>
     cats.map((cat) => ({
       title: cat.name,
       value: cat.id,
@@ -162,7 +162,7 @@ const ComponentFormPage: React.FC = () => {
                 label="分类"
                 rules={[{ required: true, message: '请选择分类' }]}
               >
-                <Select
+                <TreeSelect
                   placeholder="选择分类"
                   treeData={buildCategoryTreeData(categories)}
                   treeDefaultExpandAll

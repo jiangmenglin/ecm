@@ -6,7 +6,7 @@ import {
   ArrowLeftOutlined, EditOutlined, DeleteOutlined,
 } from '@ant-design/icons';
 import { useParams, useNavigate } from 'react-router-dom';
-import { getComponent } from '../../api';
+import { getComponent, deleteComponent } from '../../api';
 import type { Component, Parameter, Substitute } from '../../types';
 import dayjs from 'dayjs';
 
