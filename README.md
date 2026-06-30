@@ -95,11 +95,11 @@ bash start-all.sh
 **方式二：手动启动**
 
 ```bash
-# 后端（端口 8080）
+# 后端（端口 9090）
 cd backend
 mvn spring-boot:run
 
-# 前端（端口 3000，自动代理 /api → 8080）
+# 前端（端口 80，自动代理 /api → 9090）
 cd frontend
 npm install
 npm run dev
@@ -107,8 +107,8 @@ npm run dev
 
 ### 3. 访问系统
 
-- 前端页面：http://localhost:3000
-- 后端 API：http://localhost:8080/api
+- 前端页面：http://localhost
+- 后端 API：http://localhost:9090/api
 
 ## API 规范
 

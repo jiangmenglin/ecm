@@ -27,8 +27,8 @@ bash start-frontend.sh &
 FRONTEND_PID=$!
 
 echo
-echo "后端: http://localhost:8080  (PID: $BACKEND_PID)"
-echo "前端: http://localhost:3000  (PID: $FRONTEND_PID)"
+echo "后端: http://localhost:9090  (PID: $BACKEND_PID)"
+echo "前端: http://localhost:80  (PID: $FRONTEND_PID)"
 echo
 echo "按 Ctrl+C 停止所有服务"
 

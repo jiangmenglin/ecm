@@ -16,7 +16,7 @@ Electronic Component Management System (ECM - 电子元件管理系统). A full-
 
 ### Backend (from `backend/`)
 ```bash
-./mvnw spring-boot:run          # Start backend on :8080
+./mvnw spring-boot:run          # Start backend on :9090
 ./mvnw clean package             # Build JAR
 ./mvnw test                      # Run tests
 ./mvnw test -Dtest=FooTest       # Run single test class
@@ -24,7 +24,7 @@ Electronic Component Management System (ECM - 电子元件管理系统). A full-
 
 ### Frontend (from `frontend/`)
 ```bash
-npm run dev          # Start dev server on :3000 (proxies /api to :8080)
+npm run dev          # Start dev server on :80 (proxies /api to :9090)
 npm run build        # TypeScript check + Vite production build
 npm run preview      # Preview production build
 ```
