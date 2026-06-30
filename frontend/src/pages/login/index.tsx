@@ -4,7 +4,7 @@ import { UserOutlined, LockOutlined } from '@ant-design/icons';
 import { useNavigate } from 'react-router-dom';
 import { login } from '../../api';
 import { useAuthStore } from '../../store/auth';
-import type { LoginRequest } from '../../types';
+import type { LoginRequest, User } from '../../types';
 
 const { Title, Text } = Typography;
 
@@ -17,7 +17,8 @@ const LoginPage: React.FC = () => {
     setLoading(true);
     try {
       const res = await login(values);
-      const { token, user } = res.data.data;
+      const { token, username, realName } = res.data.data;
+      const user: User = { id: 0, username, realName, email: '', phone: '', role: '', enabled: true, createTime: '' };
       setAuth(token, user);
       message.success('登录成功');
       navigate('/dashboard', { replace: true });
